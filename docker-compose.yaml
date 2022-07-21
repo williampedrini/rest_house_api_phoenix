@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  rest_house_database:
+    image: postgres:9.6
+    container_name: rest_house_database
+    environment:
+      POSTGRES_USER: rest_house
+      POSTGRES_PASSWORD: rest_house
+      POSTGRES_DB: rest_house
+    mem_limit: 200M
+    ports:
+      - "5433:5432"
